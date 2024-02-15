@@ -1,1 +1,1 @@
-# trabajo-dise-o
+# trabajo-diseno
