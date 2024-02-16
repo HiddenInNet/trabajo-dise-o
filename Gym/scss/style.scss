@@ -1,25 +1,96 @@
 
-.img-redondeado {
-    border-radius: 40px;
-}
-
-.test{
-    background-color: bisque;
-}
-
-.sticky-circle {
-    width: 50px;
-    height: 50px;
-    background-color:rgb(2, 177, 2);
-    border-radius: 50%;
-    position: fixed;
-    top: 90%;
-    right: 3%; 
-    transform: translateY(-50%);
-    z-index: 9999;
-}
-
-.hola {
-    background-color: aquamarine;
+body {
+    font-family: "Arial", sans-serif;
 }
   
+.hero-section {
+    background: url("../imagenes/fondo.png")
+    no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: white;
+}
+
+    .img-redondeado {
+        border-radius: 40px;
+    }
+
+    .test{
+        background-color: bisque;
+    }
+
+    .sticky-circle {
+        width: 50px;
+        height: 50px;
+        background-color:rgb(2, 177, 2);
+        border-radius: 50%;
+        position: fixed;
+        top: 90%;
+        right: 3%; 
+        transform: translateY(-50%);
+        z-index: 9999;
+    }
+    
+    /* Personalización de la barra de navegación */
+    .custom-navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition: all 0.4s;
+    }
+    
+    /* Estilo cuando se hace scroll */
+    .navbar-shrink {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .subscription-card {
+        transition: transform 0.5s;
+      }
+      .subscription-card.active {
+        transform: scale(1.1);
+      }
+
+      .carousel-item {
+        transition: transform 0.5s ease;
+      }
+      .carousel-item.active {
+        transform: scale(1.1);
+      }
+
+      .hero-section {
+        background-color: #f8f9fa;
+        padding: 100px 0;
+      }
+      .carousel-item {
+        height: 400px; /* ajustar altura según sea necesario */
+      }
+      .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Añadir estilos personalizados aquí */
+        .header-title {
+            font-size: 3rem;
+            /* Ajustar según el diseño */
+            color: #000;
+            /* Ajustar el color según el diseño */
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            /* Ajustar según el diseño */
+            color: #666;
+            /* Ajustar el color según el diseño */
+        }
+
+        section {
+            padding: 40px;
+
+            .box-shadow{
+                box-shadow: 60px -16px teal;
+            }
+        }
+    
