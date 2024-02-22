@@ -10,60 +10,51 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
 
-
-  <script>
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 50) {
-          $('.custom-navbar').addClass('navbar-shrink');
-        } else {
-          $('.custom-navbar').removeClass('navbar-shrink');
-        }
-      });
-    });
-
-    let currentSubscription = 1;
-
-    function showPrevious() {
-      const subscriptions = document.querySelectorAll('.subscription-card');
-      subscriptions[currentSubscription].classList.remove('active');
-      currentSubscription = (currentSubscription - 1 + subscriptions.length) % subscriptions.length;
-      subscriptions[currentSubscription].classList.add('active');
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
     }
-
-    function showNext() {
-      const subscriptions = document.querySelectorAll('.subscription-card');
-      subscriptions[currentSubscription].classList.remove('active');
-      currentSubscription = (currentSubscription + 1) % subscriptions.length;
-      subscriptions[currentSubscription].classList.add('active');
+    .name {
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-  </script>
+  </style>
+
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <a class="navbar-brand" href="index.html">OLYMPICS GYM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
+          <li class="nav-item ">
+              <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Mascotas</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="tienda.html">Tienda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Servicios</a>
+              <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Precios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-        </ul>
+      </ul>
       </div>
     </div>
   </nav>
@@ -74,7 +65,7 @@
         <div class="col-lg-6 text-center text-lg-left">
           <h1 class="display-4">LO QUE TE MUEVE</h1>
           <p class="lead">ENCUÉNTRALO EN ALTA FIT</p>
-          <a href="#" class="btn btn-primary btn-lg">¡Empieza Ya!</a>
+          <a href="tarifas-form.html" class="btn btn-primary btn-lg">¡Empieza Ya!</a>
         </div>
         <div class="col-lg-6 d-none d-lg-block">
           <div id="heroCarousel" class="carousel slide" data-ride="carousel">
@@ -97,36 +88,42 @@
 
   <main>
     <div class="sticky-circle">
-      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <title>WhatsApp</title>
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-      </svg>
+      <a href="contacto.html">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>WhatsApp</title>
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+      </a>
     </div>
 
     <section>
-      <div class="container-fluid">
-        <div class="row">
-          <!-- Contenido del texto -->
-          <div class="col-md-6 p-5">
-            <h1 class="header-title">Conoce el método Altafit, <br>y empieza a sentirte bien.</h1>
-            <p class="header-subtitle">En Altafit Gym Club ponemos en práctica el Método Altafit desde tu llegada al
-              club para que consigas todos tus objetivos.</p>
-          </div>
-          <!-- Contenido de la imagen -->
-          <div class="col-md-4 image-side box-shadow">
-            <img src="imagenes/foto1.jpg">
-          </div>
+      <div id="contenedor">
+        <div class="texto">
+          <h4 class="card-title title-size">Sobre Nosotros</h4>
+          <p class="card-text card-text-font">
+            ¡Descubre el futuro del fitness en nuestro innovador gimnasio diseñado para personas y sus fieles compañeros peludos! En nuestro centro, fusionamos la última tecnología en equipamiento de ejercicio con un equipo de monitores excepcionales para ofrecerte una experiencia única y emocionante.
+          </p>
+          <p class="card-text card-text-font">
+            En nuestras instalaciones, encontrarás equipos de última generación que te llevarán a alcanzar tus objetivos fitness de manera eficiente y efectiva. Desde cintas de correr con pantallas interactivas que te transportan a paisajes inspiradores, hasta máquinas de fuerza con sistemas de resistencia inteligente que se adaptan a tu nivel de habilidad, cada elemento de nuestro gimnasio está cuidadosamente seleccionado para proporcionarte la mejor experiencia de entrenamiento posible.
+          </p>
+          <p class="card-text card-text-font">
+            Pero eso no es todo. Nuestro equipo de monitores está compuesto por profesionales apasionados y altamente cualificados que están comprometidos a ayudarte a alcanzar tus metas. Desde diseñar programas personalizados según tus necesidades y objetivos específicos, hasta proporcionar orientación experta sobre técnicas de entrenamiento y nutrición, nuestros monitores están aquí para brindarte el apoyo y la motivación que necesitas en cada paso del camino.
+          </p>
+        </div>
+        <div class="imagen">
+          <img class="img1" src="imagenes/foto100.png" alt="">
         </div>
       </div>
     </section>
-
+    
     <section>
       <div class="container mt-5">
-        <h2 class="text-center mb-5">Precios de Suscripciones</h2>
+        <h2 class="text-center mb-5 contact-form-container">Precios de Suscripciones</h2>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card subscription-card text-center">
+
+          <div class="col-md-4 p-3">
+            <div class="card subscription-card text-center tamaño">
               <div class="card-header">
                 <h3>Básico</h3>
               </div>
@@ -135,13 +132,13 @@
                 <p class="card-text">Acceso al gimnasio durante horas no pico.</p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Seleccionar</a>
+                <a href="tarifas.html" class="btn btn-primary">Seleccionar</a>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card subscription-card text-center active">
+          <div class="col-md-4 p-3">
+            <div class="card subscription-card text-center tamaño">
               <div class="card-header">
                 <h3>Estándar</h3>
               </div>
@@ -150,13 +147,13 @@
                 <p class="card-text">Acceso ilimitado al gimnasio durante horas pico y no pico.</p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Seleccionar</a>
+                <a href="tarifas.html" class="btn btn-primary">Seleccionar</a>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card subscription-card text-center">
+          <div class="col-md-4 p-3">
+            <div class="card subscription-card text-center tamaño">
               <div class="card-header">
                 <h3>Premium</h3>
               </div>
@@ -166,59 +163,55 @@
                 </p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Seleccionar</a>
+                <a href="tarifas.html" class="btn btn-primary">Seleccionar</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt-3">
-          <button onclick="showPrevious()" class="btn btn-secondary mr-3">Anterior</button>
-          <button onclick="showNext()" class="btn btn-secondary">Siguiente</button>
-        </div>
       </div>
     </section>
-    <section>
-      <div class="container mt-5">
-        <h2 class="text-center mb-5">Productos en Venta</h2>
 
-        <div class="row">
-          <div class="col-md-12">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Botella de Agua</td>
-                  <td>Botella de agua reutilizable de 750ml</td>
-                  <td>$5</td>
-                </tr>
-                <tr>
-                  <td>Toalla de Gimnasio</td>
-                  <td>Toalla absorbente de microfibra</td>
-                  <td>$10</td>
-                </tr>
-                <tr>
-                  <td>Shaker</td>
-                  <td>Vaso mezclador para batidos de proteínas</td>
-                  <td>$8</td>
-                </tr>
-              </tbody>
-            </table>
+    <section class="padding-top-bot">
+      <div id="contenedor">
+        <div class="imagen">
+          <img class="img" src="imagenes/adobe-chica-perro-m.png" alt="">
+        </div>
+        <div class="texto">
+          <h4 class="card-title title-size">Nuestros clientes</h4>
+          <div class="card">
+            <p class="name">María G.</p>
+            <p>¡Increíble! Nunca pensé que ir al gimnasio podría ser tan divertido y motivador. La tecnología de vanguardia en los equipos realmente eleva mi entrenamiento al siguiente nivel. Además, los monitores siempre están disponibles para brindar apoyo y consejos. ¡Definitivamente recomendaría este lugar a todos mis amigos!</p>
+          </div>
+          
+          <div class="card">
+            <p class="name">Juan P.</p>
+            <p>Como amante de los perros, este gimnasio es un sueño hecho realidad. No solo puedo disfrutar de un entrenamiento intenso, sino que también puedo llevar a mi perro conmigo. Las áreas para mascotas son geniales y hacen que el ejercicio sea aún más divertido. ¡Gracias por hacer que mi perro y yo estemos en forma juntos!</p>
+          </div>
+          
+          <div class="card">
+            <p class="name">Luisa M.</p>
+            <p>¡Increíble experiencia! Los equipos de última generación son impresionantes y hacen que cada entrenamiento sea emocionante. Pero lo que realmente hace que este gimnasio se destaque es el equipo de monitores. Son amables, serviciales y siempre están dispuestos a ayudar. Me siento completamente apoyada en mi viaje fitness.</p>
+          </div>
+          
+          <div class="card">
+            <p class="name">Pedro R.</p>
+            <p>Soy un aficionado al fitness desde hace años, y debo decir que este gimnasio es simplemente excepcional. La variedad de equipos y clases es impresionante, y la atención al detalle es evidente en todas partes. Los monitores son expertos en lo que hacen y siempre están dispuestos a ofrecer consejos útiles. ¡No podría pedir más!</p>
+          </div>
+          
+          <div class="card">
+            <p class="name">Laura S.</p>
+            <p>¡Fantástico! Me encanta venir aquí con mi perro después del trabajo. Es genial poder combinar mi amor por el ejercicio con el tiempo de calidad con mi mascota. Los equipos son de primera clase y los monitores son súper amables y conocedores. Definitivamente me siento más saludable y feliz desde que me uní a este gimnasio.</p>
           </div>
         </div>
       </div>
     </section>
+
     <section>
-      <div class="mt-5">
+      <div class="contact-form-container p-3 padding-top">
         <h2 class="text-center mb-4">Información de Contacto y Dirección</h2>
-        <p class="text-center"><strong>Teléfono:</strong> 123-456-7890</p>
-        <p class="text-center"><strong>Email:</strong> info@gimnasio.com</p>
-        <p class="text-center"><strong>Dirección:</strong> Calle Principal 123, Ciudad, País</p>
+        <p class="text-center"><strong>Teléfono:</strong> 660-13-01-46</p>
+        <p class="text-center"><strong>Email:</strong> info@olympicgym.com</p>
+        <p class="text-center"><strong>Dirección:</strong> Calle Gambones 2, Sevilla, España</p>
       </div>
     </section>
   </main>

@@ -3,19 +3,39 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+/* Estilos adicionales aquí */
+
+body {
+  background: linear-gradient(to right, #56CCF2, #2F80ED);
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+}
+
+.contact-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 50px;
+  /* Ajusta este valor según la altura de tu navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 90px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 743px;
+}
+
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .hero-section {
   background: url("../imagenes/fondo.png") no-repeat center center;
   background-size: cover;
   padding: 100px 0;
   color: white;
-}
-
-.img-redondeado {
-  border-radius: 40px;
-}
-
-.test {
-  background-color: bisque;
 }
 
 .sticky-circle {
@@ -35,20 +55,6 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   transition: all 0.4s;
-}
-
-/* Estilo cuando se hace scroll */
-.navbar-shrink {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.subscription-card {
-  transition: transform 0.5s;
-}
-
-.subscription-card.active {
-  transform: scale(1.1);
 }
 
 .carousel-item {
@@ -93,6 +99,79 @@ body {
 section {
   padding: 40px;
 }
-section .box-shadow {
-  box-shadow: 60px -16px teal;
-}/*# sourceMappingURL=style.css.map */
+
+.img {
+  border-radius: 40px;
+  border: 3px solid teal;
+  width: 500px;
+  height: 800px;
+  object-fit: cover;
+}
+
+.img1 {
+  border-radius: 40px;
+  border: 3px solid teal;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* tamaño fijo precios de las subscripciones */
+
+.tamaño {
+  height: 22em;
+}
+
+.tamaño:hover {
+  transform: scale(1.05);
+}
+
+.padding {
+  padding: 8em;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20em;
+  margin-top: 5em;
+}
+
+.texto {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2em;
+  margin: 3em;
+}
+
+.fondo {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-text-font {
+  font-size: 1.2em;
+}
+
+.max-height {
+  max-height: 20em;
+}
+
+.title-size {
+  font-size: 2em;
+}
+
+section {
+  padding: 8em;
+}
+
+.padding-top-bot {
+  margin: 10em;
+}
+
+.padding-top{
+  margin-top: 3em;
+}
